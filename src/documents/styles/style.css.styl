@@ -1,0 +1,125 @@
+// Variables
+$menu-item-count = 4
+$menu-item-width = 8rem
+$menu-item-height = 2rem
+$header-footer-bg-color = #F8F8F8
+$badge-bg-color = #0080FF
+$badge-fg-color = white
+$badge-page-title-color = yellow
+// end Variables
+body
+	height: 100%
+	font-size 10px !important
+*
+	padding 0
+	margin 0
+	box-sizing border-box
+a
+	color blue
+p, a, li
+	font-size 1.60rem
+ul
+	list-style-type none
+.badge
+	background-color $badge-bg-color
+	color $badge-fg-color !important
+	padding 1rem
+	padding-top 1.7rem
+	em
+		color $badge-page-title-color
+.nav-container
+	position relative
+	height 10rem
+	margin-top 20%
+	li
+		position absolute
+		height $menu-item-height
+		padding-left 0rem
+		transition padding-left 1s
+		&:hover
+			padding-left 1rem
+.navbar-header
+	width 20%
+	float left
+.navbar-collapse
+	width 80%
+	padding-left 10%
+@media (min-width: 768px)
+	body
+	#site-header
+	#site-footer
+	.main-content
+	#site-header nav
+	.container-fluid
+		width 100%
+	#site-header
+	.navbar-header
+	#site-footer
+	.main-content
+		padding-left 1%
+		padding-right 1%
+	#site-header
+	#site-footer
+		position fixed;
+		background-color $header-footer-bg-color
+	#site-header
+		top 0
+		height 8rem
+		li
+			min-width $menu-item-width
+			float left
+			text-align center
+			&:hover
+				padding-left 0
+			a
+				border-bottom 0px
+				&:hover
+					background-color #efefef
+					text-decoration none
+			&.active a
+				border-bottom solid 5px black
+	#site-header nav
+		margin-top 1rem
+	#site-footer
+		bottom 0
+		padding-top 1rem
+	.navbar-header
+	.navbar-collapse
+		float left
+	.navbar-header
+		min-width 20%
+	.navbar-default
+		width 100%
+		border 0 !important
+	.navbar-collapse
+		min-width 70%
+	.nav-container
+		position relative
+		height auto
+		margin-top 1.5rem
+		margin-left 5%
+		overflow visible
+		li
+			position absolute
+	.main-content
+		float left
+		clear left
+		margin-top 9rem
+	#site-footer
+		height 3rem
+		&:hover
+			height auto
+		ul
+			float left
+			min-width 33%
+			li
+				text-align center
+// Put #menu-items in page number order for display.
+for item in (1..$menu-item-count)
+	#menu-item-{item}
+		top $menu-item-height * item
+		left 0
+	@media (min-width: 768px)
+		#menu-item-{item}
+			left $menu-item-width * item
+			top 0
