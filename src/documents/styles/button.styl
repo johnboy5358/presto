@@ -1,0 +1,23 @@
+// Style menu button.
+// Set-up properties to morph
+button.navbar-toggle[aria-expanded="false"]
+	border-radius 4px
+	border-color transparent
+	transition all 1s .7s
+	span
+		background-color #888
+		transition all 1s .7s
+// Style - morph to a close button
+button.navbar-toggle[aria-expanded="true"]
+	border-radius 50%
+	border-color blue
+	transition all 1s .7s
+	span
+		background-color blue !important
+		transition all 1s .7s
+	span:nth-child(2)
+		transform translateY(7px) rotate(45deg)
+	span:nth-child(3)
+		opacity 0
+	span:nth-child(4)
+		transform translateY(-5px) rotate(-45deg)
