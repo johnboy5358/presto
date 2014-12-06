@@ -3,6 +3,12 @@
 @import 'base'
 @import 'components'
 // end Imports
+.navbar-header
+	width 20%
+	float left
+.navbar-collapse
+	width 80%
+	padding-left 10%
 .nav-container
 	position relative
 	height 10rem
@@ -14,13 +20,8 @@
 		transition padding-left 1s
 		&:hover
 			padding-left 1rem
-.navbar-header
-	width 20%
-	float left
-.navbar-collapse
-	width 80%
-	padding-left 10%
-
+// Media queries
+// If screen-width >= 768px then ...
 @media (min-width: 768px)
 	body
 	#site-header
