@@ -1,12 +1,11 @@
 # My Portfolio
 ## Listing
-- ** Basecuts **
-- ** The Cutty Sark **
-- ** The Mole at Tootbaldon **
-- ** Tartufo **
-- ** The Potters Arms **
-more
-- ** and more **
-
-<p>What element am I ?</p>
-
+<ul class="listing">
+	<li> ** Basecuts **</li>
+	<li> ** The Cutty Sark **</li>
+	<li> ** The Mole at Tootbaldon **</li>
+	<li> ** Tartufo **</li>
+	<li> ** The Potters Arms **</li>
+	<li>** and more **</li>
+</ul>
+### more

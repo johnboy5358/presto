@@ -22,7 +22,12 @@
 		&:hover
 			padding-left 1rem
 .main-content
-	zebra(, #D0ABAB, 'li')
+	.listing
+		border-radius 5px
+		border: solid 1px #FFC0CB;
+		padding: 1rem;
+		width: 50%;
+		zebra(, #D0ABAB, 'li')
 // Media queries
 // If screen-width >= 768px then ...
 @media (min-width: 768px)
@@ -39,6 +44,8 @@
 	.main-content
 		padding-left 1%
 		padding-right 1%
+		.listing
+			width 30%
 	#site-header
 	#site-footer
 		position fixed;
