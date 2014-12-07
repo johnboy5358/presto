@@ -1,5 +1,5 @@
 // Imports
-// Import button morphing animation.
+@import 'nib'
 @import 'mixins'
 @import 'base'
 @import 'components'
@@ -21,8 +21,8 @@
 		transition padding-left 1s
 		&:hover
 			padding-left 1rem
-.main-content ul li
-	zebra(, #D0ABAB)
+.main-content
+	zebra(, #D0ABAB, 'li')
 // Media queries
 // If screen-width >= 768px then ...
 @media (min-width: 768px)
