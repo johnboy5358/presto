@@ -1,5 +1,6 @@
 // Imports
 // Import button morphing animation.
+@import 'mixins'
 @import 'base'
 @import 'components'
 // end Imports
@@ -20,6 +21,8 @@
 		transition padding-left 1s
 		&:hover
 			padding-left 1rem
+.main-content ul li
+	zebra(, #D0ABAB)
 // Media queries
 // If screen-width >= 768px then ...
 @media (min-width: 768px)
