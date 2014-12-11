@@ -31,3 +31,62 @@ button.navbar-toggle[aria-expanded="true"]
 		color $badge-page-title-color
 	&:hover
 		background-color #8A2BE2 !important
+// end .badge styling
+// Style .listing - apply to wrapping ul.
+.listing
+	margin auto
+	border-radius 5px
+	border: solid 1px #FFC0CB
+	padding: 1rem
+	width: 50%
+	zebra(, #454545, 'li')
+// end Style .listing
+// Style .tabs
+form.tabs
+	position relative
+	width 50%
+	height 35em
+	margin auto
+	margin-top 2%
+	.content
+		position absolute
+		z-index -1
+		left 0
+		top 2.5em
+		visibility hidden
+	input
+		display none
+	input:checked + label
+	input:checked + label .content
+		background-color $active-tab-bg-color
+	input:checked + label
+		border-left solid 3px $active-tab-border-color
+		border-top solid 3px $active-tab-border-color
+		border-right solid 3px $active-tab-border-color
+		border-bottom solid 3px $active-tab-bg-color
+		color $active-tab-txt-color
+		height 36px
+		margin-top -5px
+	input:not(:checked) + label
+		color lighten($active-tab-txt-color, 25%)
+	input:not(:checked) + label:hover
+		background-color lighten($tab-label-bg-color, 10%)
+		color white
+	input:checked + label .content
+		width 100%
+		visibility visible
+		border-top solid 5px $active-tab-border-color
+		box-sizing border-box
+		padding 1em
+	label
+		float left
+		box-sizing border-box
+		cursor pointer
+		font italic 1em cambria
+		padding 1.5% 3%
+		border-left solid 1px $inactive-tab-label-border-color
+		border-top solid 1px $inactive-tab-label-border-color
+		border-right solid 1px $inactive-tab-label-border-color
+		background-color $tab-label-bg-color
+		border-radius 10px 10px 0px 0px
+// end - Style .tabs
