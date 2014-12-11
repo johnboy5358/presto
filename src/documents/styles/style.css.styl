@@ -23,11 +23,13 @@
 			padding-left 1rem
 .main-content
 	.listing
-		border-radius 5px
-		border: solid 1px #FFC0CB;
-		padding: 1rem;
-		width: 50%;
-		zebra(, #D0ABAB, 'li')
+		zebra(, #A76161, 'li')
+		li
+			padding-left 0
+			transition padding-left 1s
+			&:hover
+				cursor pointer
+				padding-left 1em
 // Media queries
 // If screen-width >= 768px then ...
 @media (min-width: 768px)
@@ -49,6 +51,7 @@
 	#site-header
 	#site-footer
 		position fixed;
+		bottom 0
 		background-color $header-footer-bg-color
 	#site-header
 		top 0
