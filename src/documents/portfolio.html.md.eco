@@ -4,3 +4,5 @@ isPage: true
 pageOrder: 3
 ---
 <%- @partial('_portf-list') %>
+<%- @partial('_css-slider') %>
+
