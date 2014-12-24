@@ -1,0 +1,53 @@
+div(class="cs3-wrapper")
+    
+    div(class="cs3-carousel")
+        form(class="slide-container" method="post" action="./")
+            
+            fieldset(class="slide")
+                // NB: input name attribute must all have same name to be mutually exclusive.
+                input(type="radio" name="slide-select" class="slide-selector" id="slide-01" checked=true)
+                label(for="slide-01" class="slide-selector-indicator")
+                figure(class="first slide-content")
+                    label(for="slide-06" class="prev") &#x2039
+                    img(src="./images/hawaii-1.jpg")
+                    label(for="slide-02" class="next") &#x203a
+
+            fieldset(class="slide")
+                input(type="radio" name="slide-select" class="slide-selector" id="slide-02")
+                label(for="slide-02" class="slide-selector-indicator")
+                figure(class="second slide-content")
+                    label(for="slide-01" class="prev") &#x2039
+                    img(src="./images/hawaii-2.jpg")
+                    label(for="slide-03" class="next") &#x203a
+
+            fieldset(class="slide")
+                input(type="radio" name="slide-select" class="slide-selector" id="slide-03")
+                label(for="slide-03" class="slide-selector-indicator")
+                figure(class="third slide-content")
+                    label(for="slide-02" class="prev") &#x2039
+                    img(src="./images/hawaii-3.jpg")
+                    label(for="slide-04" class="next") &#x203a
+
+            fieldset(class="slide")
+                input(type="radio" name="slide-select" class="slide-selector" id="slide-04")
+                label(for="slide-04" class="slide-selector-indicator")
+                figure(class="fourth slide-content")
+                    label(for="slide-03" class="prev") &#x2039
+                    img(src="./images/hawaii-4.jpg")
+                    label(for="slide-05" class="next") &#x203a
+
+            fieldset(class="slide")
+                input(type="radio" name="slide-select" class="slide-selector" id="slide-05")
+                label(for="slide-05" class="slide-selector-indicator")
+                figure(class="fifth slide-content")
+                    label(for="slide-04" class="prev") &#x2039
+                    img(src="./images/hawaii-5.jpg")
+                    label(for="slide-06" class="next") &#x203a
+
+            fieldset(class="slide")
+                input(type="radio" name="slide-select" class="slide-selector" id="slide-06")
+                label(for="slide-06" class="slide-selector-indicator")
+                figure(class="sixth slide-content")
+                    label(for="slide-05" class="prev") &#x2039
+                    img(src="./images/autumn.jpg")
+                    label(for="slide-01" class="next") &#x203a
