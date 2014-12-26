@@ -1,53 +1,16 @@
 div(class="cs3-wrapper")
-    
-    div(class="cs3-carousel")
-        form(class="slide-container" method="post" action="./")
             
-            fieldset(class="slide")
-                // NB: input name attribute must all have same name to be mutually exclusive.
-                input(type="radio" name="slide-select" class="slide-selector" id="slide-01" checked=true)
-                label(for="slide-01" class="slide-selector-indicator")
-                figure(class="first slide-content")
-                    label(for="slide-06" class="prev") &#x2039
-                    img(src="./images/hawaii-1.jpg")
-                    label(for="slide-02" class="next") &#x203a
+            div(class="cs3-carousel")
+                form(class="slide-container" method="post" action="./")
 
-            fieldset(class="slide")
-                input(type="radio" name="slide-select" class="slide-selector" id="slide-02")
-                label(for="slide-02" class="slide-selector-indicator")
-                figure(class="second slide-content")
-                    label(for="slide-01" class="prev") &#x2039
-                    img(src="./images/hawaii-2.jpg")
-                    label(for="slide-03" class="next") &#x203a
-
-            fieldset(class="slide")
-                input(type="radio" name="slide-select" class="slide-selector" id="slide-03")
-                label(for="slide-03" class="slide-selector-indicator")
-                figure(class="third slide-content")
-                    label(for="slide-02" class="prev") &#x2039
-                    img(src="./images/hawaii-3.jpg")
-                    label(for="slide-04" class="next") &#x203a
-
-            fieldset(class="slide")
-                input(type="radio" name="slide-select" class="slide-selector" id="slide-04")
-                label(for="slide-04" class="slide-selector-indicator")
-                figure(class="fourth slide-content")
-                    label(for="slide-03" class="prev") &#x2039
-                    img(src="./images/hawaii-4.jpg")
-                    label(for="slide-05" class="next") &#x203a
-
-            fieldset(class="slide")
-                input(type="radio" name="slide-select" class="slide-selector" id="slide-05")
-                label(for="slide-05" class="slide-selector-indicator")
-                figure(class="fifth slide-content")
-                    label(for="slide-04" class="prev") &#x2039
-                    img(src="./images/hawaii-5.jpg")
-                    label(for="slide-06" class="next") &#x203a
-
-            fieldset(class="slide")
-                input(type="radio" name="slide-select" class="slide-selector" id="slide-06")
-                label(for="slide-06" class="slide-selector-indicator")
-                figure(class="sixth slide-content")
-                    label(for="slide-05" class="prev") &#x2039
-                    img(src="./images/autumn.jpg")
-                    label(for="slide-01" class="next") &#x203a
+                    // NB: input name attribute must all have same name to be mutually exclusive.
+                    - var slides = ['hawaii-1', 'hawaii-2', 'hawaii-3', 'hawaii-4', 'hawaii-5', 'autumn']
+                    - var sl_count = slides.length
+                    each slide_url, index in slides
+                        fieldset(class="slide")
+                            input(type="radio" name="slide-select" class="slide-selector" id="slide-0#{index}" checked=index==0 ? true : false)
+                            label(for="slide-0#{index}" class="slide-selector-indicator")
+                            figure(class="slide-#{index} slide-content")
+                                label(for="slide-0#{(slide_no = index == 0 ? (sl_count - 1) : index - 1)}" class="prev") &#x2039
+                                img(src="./images/#{slide_url}.jpg")
+                                label(for="slide-0#{(slide_no = index == (sl_count - 1) ? 0 : index + 1)}" class="next") &#x203a
